@@ -25,6 +25,10 @@ maintab:Toggle('Start Auto Teleport Area 3', function(a)
     _G.TeleportArea3 = a
 end)
 
+maintab:Toggle('Start Auto Teleport Area 4', function(a)
+    _G.TeleportArea4 = a
+end)
+
 charactertab:Toggle('Auto Punch Area 1', function(a)
     _G.Puch1 = a
 end)
@@ -35,6 +39,10 @@ end)
 
 charactertab:Toggle('Auto Punch Area 3', function(a)
     _G.Puch3 = a
+end)
+
+charactertab:Toggle('Auto Punch Area 4', function(a)
+    _G.Puch4 = a
 end)
 
 uitab:Button('Destroy GUI', function()
@@ -288,5 +296,108 @@ spawn(function()
 end)
 --------------Area3---------------------------------
 --------------Area4---------------------------------
+spawn(function()
+    while wait() do
+        pcall(function()
+            if _G.Puch4 then
+                local args = {
+                    [1] = {
+                        [1] = {
+                            [1] = "\6",
+                            [2] = "Normal"
+                        },
+                        [2] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_1a"]
+                        },
+                        [3] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_1b"]
+                        },
+                        [4] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_1c"]
+                        },
+                        [5] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_2a"]
+                        },
+                        [6] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_2b"]
+                        },
+                        [7] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_2c"]
+                        },
+                        [8] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_3a"]
+                        },
+                        [9] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_3b"]
+                        },
+                        [10] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_3c"]
+                        },
+                        [11] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_3d"]
+                        },
+                        [12] = {
+                            [1] = "\4",
+                            [2] = "Attack",
+                            [3] = workspace.__GAME.__Mobs.Area4["4_4a"]
+                        }
+                    }
+                }
+                game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args)) 
+            end               
+        end)
+    end
+end)
+
+spawn(function()
+    while wait() do
+        pcall(function()
+            local TimeArea4 = 2
+            if _G.TeleportArea4 then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1029.5638427734375, 48.729862213134766, -340.6593322753906)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1065.0550537109375, 48.729862213134766, -392.2237243652344)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1045.7784423828125, 48.83922576904297, -264.314697265625)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1119.666748046875, 48.83796691894531, -322.8772277832031)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1168.035400390625, 48.729862213134766, -358.8011474609375)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.958251953125, 48.729862213134766, -284.2232360839844)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1252.323486328125, 48.729862213134766, -396.5902099609375)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1278.95849609375, 48.83922576904297, -296.9150390625)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1317.873046875, 48.729862213134766, -360.931884765625)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1343.670654296875, 48.83922576904297, -240.9521026611328)
+                wait(TimeArea4)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1364.753173828125, 48.729862213134766, -329.44232177734375)
+            end
+        end)
+    end
+end)
 
 --------------Area4---------------------------------
